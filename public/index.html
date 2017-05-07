@@ -28,7 +28,6 @@
             <img src="//www.google.com/favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
             Navbar
         </a>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -60,13 +59,23 @@
 
       <!-- Navbar -->
 
-      <div class="container">
-        <div class="row">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-2">
+            <div class="sidebar" ng-repeat="language in languagesArray">
+              <p>{{language}}</p>
 
-          <ui-view></ui-view>
+            </div>
 
+          </div>
+          <div class="col sidebar">
+            <ui-view></ui-view>
+
+          </div>
         </div>
       </div>
+
+
     </div> <!-- outer div -->
 
 
